@@ -171,7 +171,8 @@ NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield
 
 
 Sign 0:
-Predicted Labels			| Softmax Probability
+
+| Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
 | Turn right ahead                        |  99.8363554478% |
 | Go straight or left                     |   0.0343522261% |
