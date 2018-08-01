@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
                                    2) [Traffic_Sign_Classifier_Sermanet_Baike.ipynb](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier_Sermanet_Baike.ipynb)
 * HTML output of the code:   1) [Traffic_Sign_Classifier_Baike.html](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier_Baike.html)
                              2) [Traffic_Sign_Classifier_Sermanet_Baike.html](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier_Sermanet_Baike.html)
-* A writeup report (either pdf or markdown) [README.md](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/README.md)
+* A markdown writeup report [writeup_Baike.md](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_Baike.md)
 
 ### Data Set Summary & Exploration
 
