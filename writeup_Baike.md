@@ -170,7 +170,7 @@ NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield
 **Image 1: Speed limit (30km/h)**
 
 
-Sign 0:
+Image 1:
 
 | Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
@@ -181,14 +181,15 @@ Sign 0:
 | Right-of-way at the next intersection   |   0.0179224138% |
 
 
+Image 2:
 
 | Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
-| Speed limit (30km/h)  |  99.6836543083%      |
-| Speed limit (20km/h)  |   0.1554675750%      |
-| Speed limit (70km/h)  |   0.0655542128%      |
-| Speed limit (50km/h)  |   0.0541767222%      |
-| Roundabout mandatory  |   0.0112286703%      |
+|Speed limit (60km/h)                    |  99.9998688698%|
+|Turn left ahead                         |   0.0001002719%|
+|No entry                                |   0.0000119647%|
+|End of all speed and passing limits     |   0.0000105941%|
+|Stop                                    |   0.0000080092%|
 
 
 **Image 2: Road work**
