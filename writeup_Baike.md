@@ -136,7 +136,7 @@ My final accuracy was:
 
 ### Testing the Model on New Images
 
-#### Five German traffic signs found on the web 
+#### Seven German traffic signs found on the web 
 
 Here are seven German traffic sign images that I found on the web with some cropped:
 
