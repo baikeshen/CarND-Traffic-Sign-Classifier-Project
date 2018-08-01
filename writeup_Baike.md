@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 [//]: # (Image References)
-[image1]: ./examples/visualization.jpg "Visualization"
+[image1]: ./misc/dataSet_BarChart.JPG "Visualization"
 [image2]: ./examples/LeNet.png "LeNet"
 [image3]: ./new_signs/sign1.jpg "Sign1"
 [image4]: ./new_signs/sign2.jpg "Sign2"
