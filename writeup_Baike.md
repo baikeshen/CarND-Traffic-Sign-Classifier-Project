@@ -37,9 +37,9 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 | Item			         	     |  Size	    | 
 |:------------------------------:|:------------:| 
 | training set  	     | 34799 	    | 
-| Size of the validation set     | 4410  		|
-| Size of test set				 | 12630		|
-| Shape of a traffic sign image	 | 32, 32, 3    |
+| validation set     | 4410  		|
+| test set				 | 12630		|
+| Shape of traffic sign image	 | 32, 32, 3    |
 | Number of unique labels		 | 43 	   		|
 
 #### Visualization of the dataset.
@@ -48,20 +48,19 @@ Here is a visualization of the data set. It is a bar chart showing how many samp
 
 ![alt text][image1]
 
-I also wanted to view some of the sign data, so I added some logic in the notebook to parse the sign names CSV database, and then output 3 random samples of each sign from the training data with their associated text labels.  See [Traffic_Sign_Classifier.html](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/Traffic_Sign_Classifier.html) for this visualization.
+In order to visualize the German Traffic Signs dataset, Random selected images with their associated lable. Please see [Traffic_Sign_Classifier_Baike.html](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier_Baike.html) for this visualization.
+
 ### Design and Test a Model Architecture
 
 #### Preprocessing 
 
 ##### Greyscaling
 
-As a first step, I converted the images to grayscale.  When examining the data above, I noticed several minor differences in lighting/brightness which I suspect may have influenced the training operation.  Since color was not as important as the sign symbols themselves, it seemed like a good idea to remove color from the equation.     
-
-Also, when reading the [successful study](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) of this same problem, which achieved 99.17% accuracy, they suggested grey scaling the data played a signficant part in their success.
+As a first step, I sticked to the color images, the shape of first layer to the original LeNet has to be changed from (5 , 5, 1 ,6) to (5, 5, 3, 6). Compared to converting the images to grayscale, there is no so much diffrence from the final results perspective, but the computation is much heavier. So I decided to give up color image and picked up the mothed of converting the images to gray. It helps to reduce training time. 
 
 ##### Normalization
 
-As a last step, I normalized the image data so that the data has mean zero and equal variance.  It seems this is a common image preprocessing step. 
+Secondly, Normalizing the data to range (-1, 1). This is done by using XX_train=(xx_train-128)/128. As suggested in the lesson, this way is nice and easy to implement. Following this method, there is not wider distribution in the data and make it easier to train using a singular learning rate.
 
 #### Model architecture
 
