@@ -106,29 +106,29 @@ Based on my own understanding, the model is set up as below:
 | 7. Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x16 	|
 | 8. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 1x1x400 	|
 | 9. RELU					| Activation function							|
-| 10. Flatten layers from 8 (1x1x400) and 6 （5x5x16 ->400) 		| output 120   									|
-| 11. RELU					| Activation function							|
+| 10. Flatten layers from 8 (1x1x400) and 6 （5x5x16 ->400) 		| output 800   									|
+| 11. Concatenate flattened layers to a single size					| output 800							|
 | 12. Fully connected		| output 84   									|
-| 13. RELU					| Activation function							|
-| 14. Fully connected		| output 43   									|
-| 15. Softmax				| Applied to get probabilities					|
+| 13. Fully connected layers		| output 43   									|
+| 14. Softmax				| Applied to get probabilities					|
 |						|												| 
 
 
 #### Training
 
-To train the model, I reused a lot of the python source code from the LeNet lab.  This code uses 20 epochs, a batch size of 128, and a learning rate of .001.  It calculates loss using softmax cross entropy.  It minimizes loss using the Adam Optimizer which is built into TensorFlow.  It then checks the model on the validation set and outputs an accuracy. 
+To train the model, I used Adam optimizer (already implemented in LetNet lab), the final setting used for both models is the same :
+- batch size: 128
+- epochs: 30
+- learning rate: 0.001
+- mu: 0
+- sigma: 0.1
+- dropout keep probability: 0.5
 
-#### Improving Validation Accuracy
+It calculates loss using softmax cross entropy.  It minimizes loss using the Adam Optimizer which is built into TensorFlow.  It then checks the model on the validation set and outputs an accuracy. The final results from both model are quite similar. It is surprise to me. I thought the second one (Seramut/Lecun) should be better than the first one (original LetNet). I can not tell the reason. 
 
-My original model results only achieved a validation accuracy of about 86%, and my test accuracy was even lower.  
-
-I suspected I was overfitting as my training accuracy was remaining high, and I recalled from the lesson that dropout was one of the best approaches for regularization.  Thus, I introduced a 50% dropout into the last 3 fully connected layers in my architecture.  I was also careful to avoid any dropout when validating the model on the validation and test sets.
-
-Introducing 50% dropout slowed down my training rate, which makes sense as half the activations are ignored during training.  Thus, 20 epochs was no longer enough to reach my peak accuracy.  I experimented with some different amounts here and found that with 50 epochs, I leveled out at around 96% accuracy.
 My final accuracy was: 
-* 95.8% on the validation set
-* 94.1% on the test set 
+* 96.2% on the validation set
+* 93.5% on the test set 
 
 
 ### Testing the Model on New Images
