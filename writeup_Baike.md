@@ -135,33 +135,31 @@ My final accuracy was:
 
 #### Five German traffic signs found on the web 
 
-Here are seven German traffic sign images that I found on the web:
+Here are seven German traffic sign images that I found on the web with minor cropped:
 
 : ![alt text][image4]
 
-
-I cropped them down to only include the signs.  
-
-**Challenges for the model** 
-* Image 1,2 and 5 include a lot of background noise.  
-* Image 2 has some shadows.  
-* Image 4 has a watermark.  
-* Image 5 has another sign peeking out in the background 
+Image 1,3, 5 and 6 include a lot of background noise.  It should be relative difficult to classify. Image 6 and Image 7 are cropped from the same image. Image 7 should be easier to identified given less backgroud.
 
 #### Model's predictions
+
+Due to the results from both models are similiar, only the prediction from the first model (Original LeNet model) is shown as below:
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        | 
 |:---------------------:|:-------------------------:| 
-| Speed Limit 30km/h    | Speed Limit 30km/h 		| 
-| Road Work   			| Road Work  				|
-| Yield					| Yield						|
-| Child Crossing	    | Child Crossing			|
 | Turn Right Ahead		| Turn Right Ahead	   		|
+| Speed Limit 60km/h    | Speed Limit 60km/h 		| 
+| Child Crossing	    | Child Crossing			|
+| Stop Sign	    | Stop Sign			|
+| Road Work   			| Road Work  				|
+| Speed Limit 20km/h    | Children crossing 		| 
+| Speed Limit 20km/h    | Speed Limit 20km/h 		| 
 
 
-The model was able to correctly guess all 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 94.1%
+
+The model was able to correctly guess 6 traffic signs, which gives an accuracy of 85.7% which is lower than the accuracy on the test set of 93.5%
 
 #### Model certainty 
 
@@ -170,6 +168,18 @@ These are the top 5 softmax probabilities for each sign from the model.
 NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield" and 0 for the rest because the actual amounts were less than 0.0000000001%.
 
 **Image 1: Speed limit (30km/h)**
+
+
+Sign 0:
+Predicted Labels			| Softmax Probability
+|:---------------------:|:--------------------:| 
+| Turn right ahead                        |  99.8363554478% |
+| Go straight or left                     |   0.0343522261% |
+| No passing for vehicles over 3.5 metric tons  |   0.0254559098% |
+| Stop                                    |   0.0245628878% |
+| Right-of-way at the next intersection   |   0.0179224138% |
+
+
 
 | Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
