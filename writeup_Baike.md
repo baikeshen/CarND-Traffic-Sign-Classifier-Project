@@ -74,18 +74,18 @@ Below is a description of the LeNet architecture for a 32x32x1 input greyscale i
 |:---------------------:|:---------------------------------------------:| 
 | 1. Input         		| 32x32x1 Greyscale image 						| 
 | 2. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					| Activation function							|
-| Max pooling	      	| 2x2 stride, valid padding, outputs 16x16x6 	|
-| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 10x10x16 	|
-| RELU					| Activation function							|
-| Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x16 	|
-| Flattening 	      	| outputs 5x5x16=400						 	|
-| Fully connected		| output 120   									|
-| RELU					| Activation function							|
-| Fully connected		| output 84   									|
-| RELU					| Activation function							|
-| Fully connected		| output 43   									|
-| Softmax				| Applied to get probabilities					|
+| 3. RELU					| Activation function							|
+| 4. Max pooling	      	| 2x2 stride, valid padding, outputs 16x16x6 	|
+| 5. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 10x10x16 	|
+| 6. RELU					| Activation function							|
+| 7. Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x16 	|
+| 8. Flattening 	      	| outputs 5x5x16=400						 	|
+| 9. Fully connected		| output 120   									|
+| 10. RELU					| Activation function							|
+| 11. Fully connected		| output 84   									|
+| 12. RELU					| Activation function							|
+| 13. Fully connected		| output 43   									|
+| 14. Softmax				| Applied to get probabilities					|
 |						|												| 
 
 
@@ -97,21 +97,21 @@ Based on my own understanding, the model is set up as below:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Greyscale image 						| 
-| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					| Activation function							|
-| Max pooling	      	| 2x2 stride, valid padding, outputs 16x16x6 	|
-| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 10x10x16 	|
-| RELU					| Activation function							|
-| Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x16 	|
-| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 1x1x400 	|
-| RELU					| Activation function							|
-| Flatten layers 		| output 120   									|
-| RELU					| Activation function							|
-| Fully connected		| output 84   									|
-| RELU					| Activation function							|
-| Fully connected		| output 43   									|
-| Softmax				| Applied to get probabilities					|
+| 1. Input         		| 32x32x1 Greyscale image 						| 
+| 2. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 28x28x6 	|
+| 3. RELU					| Activation function							|
+| 4. Max pooling	      	| 2x2 stride, valid padding, outputs 16x16x6 	|
+| 5. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 10x10x16 	|
+| 6. RELU					| Activation function							|
+| 7. Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x16 	|
+| 8. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 1x1x400 	|
+| 9. RELU					| Activation function							|
+| 10. Flatten layers from 8 (1x1x400) and 6 （5x5x16 ->400) 		| output 120   									|
+| 11. RELU					| Activation function							|
+| 12. Fully connected		| output 84   									|
+| 13. RELU					| Activation function							|
+| 14. Fully connected		| output 43   									|
+| 15. Softmax				| Applied to get probabilities					|
 |						|												| 
 
 
