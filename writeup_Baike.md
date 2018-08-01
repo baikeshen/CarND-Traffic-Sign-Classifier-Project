@@ -91,7 +91,8 @@ Below is a description of the LeNet architecture for a 32x32x1 input greyscale i
 
 
 The second one I have adapted from Sermanet/Lecun traffic sign classififcation joural article. The archtecture diagram is shown as below:
-: ![alt text][image3]
+
+: ![alt text][image4]
 
 Based on my own understanding, the model is set up as below:
 
