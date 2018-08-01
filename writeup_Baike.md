@@ -1,4 +1,4 @@
-# **Traffic Sign Recognition ** 
+# ** Traffic Sign Recognition ** 
 
 ## Writeup
 
@@ -24,7 +24,8 @@ The goals / steps of this project are the following:
 
 ---
 ### Files Submitted
-* Two Ipython notebooks with code: [Traffic_Sign_Classifier_Baike.ipynb](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/Traffic_Sign_Classifier.ipynb)
+* Two Ipython notebooks with code: [Traffic_Sign_Classifier_Baike.ipynb](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier_Baike.ipynb)
+                                   [Traffic_Sign_Classifier_Sermanet_Baike.ipynb](https://github.com/baikeshen/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier_Sermanet_Baike.ipynb)
 * HTML output of the code [Traffic_Sign_Classifier.html](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/Traffic_Sign_Classifier.html)
 * A writeup report (either pdf or markdown) [README.md](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/README.md)
 
