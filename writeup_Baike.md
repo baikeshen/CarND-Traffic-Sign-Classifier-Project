@@ -167,10 +167,7 @@ These are the top 5 softmax probabilities for each sign from the model.
 
 NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield" and 0 for the rest because the actual amounts were less than 0.0000000001%.
 
-**Image 1: Speed limit (30km/h)**
-
-
-Image 1:
+**Image 1: Turn right ahead**
 
 | Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
@@ -181,7 +178,7 @@ Image 1:
 | Right-of-way at the next intersection   |   0.0179224138% |
 
 
-Image 2:
+**Image 2: Speed limit (60km/h)**
 
 | Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
@@ -192,45 +189,57 @@ Image 2:
 |Stop                                    |   0.0000080092%|
 
 
-**Image 2: Road work**
+**Image 3: Children crossing**
 
 | Prediction         			  |     Probability	     | 
 |:-------------------------------:|:--------------------:| 
-| Road work                       |  99.9952197075%      |
-| Dangerous curve to the right    |   0.0029470650%      |
-| Road narrows on the right       |   0.0005351747%      |
-| End of no passing               |   0.0004788929%      |
-| Ahead only                      |   0.0002219612%      |
+|Children crossing                       |  99.9462306499%|
+|End of no passing                       |   0.0346069777%|
+|Turn left ahead                         |   0.0102840131%|
+|Pedestrians                             |   0.0045954632%|
+|Dangerous curve to the right            |   0.0016845350%|
 
-**Image 3: Yield**
-
-| Prediction         	|     Probability	   | 
-|:---------------------:|:--------------------:| 
-| Yield                 | 100.0000000000%      |
-| Bumpy road            |   0.0000000000%      |
-| Keep left             |   0.0000000000%      |
-| Road work             |   0.0000000000%      |
-| Ahead only            |   0.0000000000%      |
-
-**Image 4: Children crossing**
+**Image 4: Stop Sign**
 
 | Prediction         	|     Probability	   | 
 |:---------------------:|:--------------------:| 
-| Children crossing     |  99.9855160713%      |
-| Bicycles crossing     |   0.0081554441%      |
-| Bumpy road            |   0.0038773855%      |
-| Ahead only            |   0.0009513222%      |
-| No entry              |   0.0005606900%      |
+|Stop                                    |  99.9997377396%|
+|Speed limit (60km/h)                    |   0.0001563726%|
+|Speed limit (30km/h)                    |   0.0000529168%|
+|No entry                                |   0.0000396650%|
+|Go straight or right                    |   0.0000075150%|
 
-**Image 5: Turn right ahead**
+
+**Image 5: Road work**
+
+| Prediction         	|     Probability	   | 
+|:---------------------:|:--------------------:| 
+|Road work                               | 100.0000000000%|
+|Double curve                            |   0.0000037333%|
+|Beware of ice/snow                      |   0.0000012733%|
+|Go straight or right                    |   0.0000003162%|
+|Yield                                   |   0.0000000627%|
+
+**Image 6: Speed limit (20km/h)**
 
 | Prediction         	  |     Probability	     | 
 |:-----------------------:|:--------------------:|
-| Turn right ahead        |  99.9999403954%      |
-| Stop                    |   0.0000289722%      |
-| Yield                   |   0.0000089241%      |
-| Ahead only              |   0.0000061633%      |
-| Speed limit (60km/h)    |   0.0000054985%      |
+|Children crossing                       |  41.6731387377%|
+|Turn left ahead                         |  12.7226799726%|
+|Go straight or right                    |   4.4760543853%|
+|Speed limit (20km/h)                    |   3.7788741291%|
+|End of no passing                       |   3.2620340586%|
 
+**Image 7: Speed limit (20km/h)**
 
-As you can see, the model's certainty for all 5 signs was above 99% for the correct label.  If I had more time, I would have liked to see how it faired with even more challenging images. 
+| Prediction         	  |     Probability	     | 
+|:-----------------------:|:--------------------:|
+|Speed limit (20km/h)                    |  76.8208980560%|
+|Speed limit (30km/h)                    |   8.7321907282%|
+|Roundabout mandatory                    |   7.4885345995%|
+|End of all speed and passing limits     |   2.7689540759%|
+|Go straight or left                     |   1.6382671893%|
+
+As you can see, the model's certainty for the first 5 signs was above 99% for the correct label.  However,, it is quite challenge to classify the sign of speed limit （20km/h). One possible reason is lack of training samples (less than 250). If applying more additional sample for speed limit (20km/h), the accuracy could be improved.
+
+1) f I had more time, I would have liked to see how it faired with even more challenging images. 
