@@ -15,8 +15,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 [image1]: ./misc/dataSet_BarChart.JPG "Visualization"
-[image2]: ./examples/LeNet.png "LeNet"
-[image3]: ./new_signs/sign1.jpg "Sign1"
+[image2]: ./misc/lenet.png "Lenet Diagram"
+[image3]: ./misc/modifiedLetNet.jpg "modified LetNet Model"
 [image4]: ./new_signs/sign2.jpg "Sign2"
 [image5]: ./new_signs/sign3.jpg "Sign3"
 [image6]: ./new_signs/sign4.jpg "Sign4"
@@ -64,16 +64,16 @@ Secondly, Normalizing the data to range (-1, 1). This is done by using XX_train=
 
 #### Model architecture
 
-My final model was essentially pulled from the LeNet lab. It has two convolutional layers with max pooling and RELU activation, a flattening layer, and then 3 fully connected layers with REUL activation.
+I have adopted two models. For the first one I began by implementing the similar archtecture from the LetNet lab, with no changes since my dataset is in grayscale. It has two convolutional layers with max pooling and RELU activation, a flattening layer, and then 3 fully connected layers with REUL activation. The original Lenet neural architechture diagram is shown as below:
 
-Modified LeNet neural network architecture diagram from LeNet lecture: ![alt text][image2]
+: ![alt text][image2]
 
 Below is a description of the LeNet architecture for a 32x32x1 input greyscale image with 43 output labels.
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Greyscale image 						| 
-| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 28x28x6 	|
+| 1. Input         		| 32x32x1 Greyscale image 						| 
+| 2. Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 28x28x6 	|
 | RELU					| Activation function							|
 | Max pooling	      	| 2x2 stride, valid padding, outputs 16x16x6 	|
 | Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 10x10x16 	|
@@ -88,6 +88,31 @@ Below is a description of the LeNet architecture for a 32x32x1 input greyscale i
 | Softmax				| Applied to get probabilities					|
 |						|												| 
 
+
+
+The second one I have adapted from Sermanet/Lecun traffic sign classififcation joural article. The archtecture diagram is shown as below:
+: ![alt text][image3]
+
+Based on my own understanding, the model is set up as below:
+
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x1 Greyscale image 						| 
+| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 28x28x6 	|
+| RELU					| Activation function							|
+| Max pooling	      	| 2x2 stride, valid padding, outputs 16x16x6 	|
+| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 10x10x16 	|
+| RELU					| Activation function							|
+| Max pooling	      	| 2x2 stride, valid padding, outputs 5x5x16 	|
+| Convolution 5x5  	 	| 1x1 stride, valid padding, outputs 1x1x400 	|
+| RELU					| Activation function							|
+| Flatten layers 		| output 120   									|
+| RELU					| Activation function							|
+| Fully connected		| output 84   									|
+| RELU					| Activation function							|
+| Fully connected		| output 43   									|
+| Softmax				| Applied to get probabilities					|
+|						|												| 
 
 
 #### Training
