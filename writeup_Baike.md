@@ -1,9 +1,9 @@
-# **Traffic Sign Recognition Using Deep Learning** 
+# **Traffic Sign Recognition ** 
 
 ## Writeup
 
 ---
-**Goal: Build a Neural Network to Recognize Traffic Signs**
+**Build a Neural Network to Recognize Traffic Signs**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 
 ---
 ### Files Submitted
-* Ipython notebook with code: [Traffic_Sign_Classifier.ipynb](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/Traffic_Sign_Classifier.ipynb)
+* Two Ipython notebooks with code: [Traffic_Sign_Classifier_Baike.ipynb](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/Traffic_Sign_Classifier.ipynb)
 * HTML output of the code [Traffic_Sign_Classifier.html](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/Traffic_Sign_Classifier.html)
 * A writeup report (either pdf or markdown) [README.md](https://github.com/dylanbrandtner/CarND-Traffic-Sign-Classifier-Project-Dylan/blob/master/README.md)
 
