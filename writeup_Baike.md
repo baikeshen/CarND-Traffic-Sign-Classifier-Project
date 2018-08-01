@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./misc/dataSet_BarChart.JPG "Visualization"
 [image2]: ./misc/lenet.png "Lenet Diagram"
-[image3]: ./misc/modifiedLeNet.jpg "modified LetNet Model"
+[image3]: ./misc/modifiedLeNet.jpeg "modified LetNet Model"
 [image4]: ./misc/Addition_7_Germany_Traffic_Signs.JPG "7 Germany Traffic Signs"
 [image5]: ./new_signs/sign3.jpg "Sign3"
 [image6]: ./new_signs/sign4.jpg "Sign4"
@@ -92,7 +92,7 @@ Below is a description of the LeNet architecture for a 32x32x1 input greyscale i
 
 The second one I have adapted from Sermanet/Lecun traffic sign classififcation joural article. The archtecture diagram is shown as below:
 
-: ![alt text][image4]
+: ![alt text][image3]
 
 Based on my own understanding, the model is set up as below:
 
