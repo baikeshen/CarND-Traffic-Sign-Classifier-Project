@@ -119,7 +119,7 @@ Based on my own understanding, the model is set up as below:
 
 #### Training
 
-To train the model, I used Adam optimizer (already implemented in LetNet lab), the final setting used for both models is the same :
+To train the model, I used Adam optimizer (already implemented in LetNet lab), the final settings used for both models are the same :
 - batch size: 128
 - epochs: 30
 - learning rate: 0.001
