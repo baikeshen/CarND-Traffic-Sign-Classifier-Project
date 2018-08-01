@@ -36,7 +36,7 @@ I used the numpy library to calculate summary statistics of the traffic signs da
 
 | Item			         	     |  Size	    | 
 |:------------------------------:|:------------:| 
-| Size of training set  	     | 34799 	    | 
+| training set  	     | 34799 	    | 
 | Size of the validation set     | 4410  		|
 | Size of test set				 | 12630		|
 | Shape of a traffic sign image	 | 32, 32, 3    |
