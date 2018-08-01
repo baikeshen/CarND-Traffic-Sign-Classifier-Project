@@ -16,8 +16,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image1]: ./misc/dataSet_BarChart.JPG "Visualization"
 [image2]: ./misc/lenet.png "Lenet Diagram"
-[image3]: ./misc/modifiedLetNet.jpg "modified LetNet Model"
-[image4]: ./new_signs/sign2.jpg "Sign2"
+[image3]: ./misc/modifiedLeNet.jpg "modified LetNet Model"
+[image4]: ./misc/Addition_7_Germany_Traffic_Signs.JPG "7 Germany Traffic Signs"
 [image5]: ./new_signs/sign3.jpg "Sign3"
 [image6]: ./new_signs/sign4.jpg "Sign4"
 [image7]: ./new_signs/sign5.jpg "Sign5"
@@ -135,9 +135,10 @@ My final accuracy was:
 
 #### Five German traffic signs found on the web 
 
-Here are five German traffic sign images that I found on the web:
+Here are seven German traffic sign images that I found on the web:
 
-![alt text][image3] ![alt text][image4] ![alt text][image5] ![alt text][image6] ![alt text][image7]
+: ![alt text][image4]
+
 
 I cropped them down to only include the signs.  
 
