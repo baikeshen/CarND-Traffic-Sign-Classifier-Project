@@ -64,7 +64,7 @@ Secondly, Normalizing the data to range (-1, 1). This is done by using XX_train=
 
 #### Model architecture
 
-I have adopted two models. For the first one I began by implementing the similar archtecture from the LetNet lab, with no changes since my dataset is in grayscale. It has two convolutional layers with max pooling and RELU activation, a flattening layer, and then 3 fully connected layers with REUL activation. The original Lenet neural architechture diagram is shown as below:
+I have implemented two models. For the first one I began by implementing the similar archtecture from the LetNet lab, with no changes since my dataset is in grayscale. It has two convolutional layers with max pooling and RELU activation, a flattening layer, and then 3 fully connected layers with REUL activation. The original Lenet neural architechture diagram is shown as below:
 
 : ![alt text][image2]
 
@@ -88,6 +88,8 @@ Below is a description of the LeNet architecture for a 32x32x1 input greyscale i
 | 14. Softmax				| Applied to get probabilities					|
 |						|												| 
 
+
+Recalled from the lesson,dropout was one of the best approaches for regularization. three individual 50% dropouts have been introduced  into the last 3 fully connected layers in the first architecture. Please note any dropout should be avoided when validating the model on the validation and test sets.
 
 
 The second one I have adapted from Sermanet/Lecun traffic sign classififcation joural article. The archtecture diagram is shown as below:
@@ -125,7 +127,7 @@ To train the model, I used Adam optimizer (already implemented in LetNet lab), t
 - sigma: 0.1
 - dropout keep probability: 0.5
 
-It calculates loss using softmax cross entropy.  It minimizes loss using the Adam Optimizer which is built into TensorFlow.  It then checks the model on the validation set and outputs an accuracy. The final results from both model are quite similar. It is surprise to me. I thought the second one (Seramut/Lecun) should be better than the first one (original LetNet). I can not tell the reason. 
+It calculates loss using softmax cross entropy.  It minimizes loss using the Adam Optimizer which is built into TensorFlow.  It then checks the model on the validation set and outputs an accuracy. The final results from both model are quite similar. It is surprise to me. I thought the second one (Seramut/Lecun) should be better than the first one (original LetNet). I can not explanin the reason. 
 
 My final accuracy was: 
 * 96.2% on the validation set
@@ -136,7 +138,7 @@ My final accuracy was:
 
 #### Five German traffic signs found on the web 
 
-Here are seven German traffic sign images that I found on the web with minor cropped:
+Here are seven German traffic sign images that I found on the web with some cropped:
 
 : ![alt text][image4]
 
@@ -241,4 +243,4 @@ NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield
 |End of all speed and passing limits     |   2.7689540759%|
 |Go straight or left                     |   1.6382671893%|
 
-As you can see, the model's certainty for the first 5 signs was above 99% for the correct label.  However,, it is quite challenge to classify the sign of speed limit （20km/h). One possible reason is lack of training samples (less than 250). If applying more additional sample for speed limit (20km/h), the accuracy could be improved.
+As you can see, the model's certainty for the first 5 signs was above 99% for the correct label.  However,, it is quite challenge to classify the sign of speed limit （20km/h). One possible reason is lack of training samples (less than 250). If applying more additional samples for speed limit (20km/h), the accuracy could be improved.
