@@ -241,5 +241,3 @@ NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield
 |Go straight or left                     |   1.6382671893%|
 
 As you can see, the model's certainty for the first 5 signs was above 99% for the correct label.  However,, it is quite challenge to classify the sign of speed limit （20km/h). One possible reason is lack of training samples (less than 250). If applying more additional sample for speed limit (20km/h), the accuracy could be improved.
-
-1) f I had more time, I would have liked to see how it faired with even more challenging images. 
