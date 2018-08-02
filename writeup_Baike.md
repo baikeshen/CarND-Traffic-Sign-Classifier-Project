@@ -130,10 +130,6 @@ To train the model, I used Adam optimizer (already implemented in LetNet lab), t
 
 It calculates loss using softmax cross entropy.  It minimizes loss using the Adam Optimizer which is built into TensorFlow.  It then checks the model on the validation set and outputs an accuracy. The final results from both model are quite similar. It is surprise to me. I thought the second one (Seramut/Lecun) should be better than the first one (original LetNet). I can not explanin the reason. 
 
-My final accuracy was: 
-* 96.2% on the validation set
-* 93.5% on the test set 
-
 #### Solution Approach
 
 1) I implemented the LeNet architecture since it worked well for the analysis of 32x32x1 MNIST images in the previous assignment. 
@@ -194,7 +190,7 @@ Here are seven German traffic sign images that I found on the web with some crop
 
 : ![alt text][image4]
 
-I don't think these images should be difficult to classify since they look similar to the images from the training set after being rescaled to the same size. Furthermore, all new images are much brighter and clear. For the mis-classified images, I was intended to make the 20km/h sign smaller and leave more space to the background. The prediction result does not surprise me. 
+I don't think these images should be difficult to classify since they look similar to the images from the training set after being rescaled to the same size. Furthermore, all new images are much brighter and clear. For the mis-classified image6 I was intended to make the sign of 20km/h smaller and leave more space to the background. The prediction result does not surprise me. 
 
 
 #### Model's predictions
@@ -296,4 +292,4 @@ NOTE: Results are rounded to 10 decimal places.  Image 3 shows "100%" for "Yield
 |End of all speed and passing limits     |   2.7689540759%|
 |Go straight or left                     |   1.6382671893%|
 
-As you can see, the model's certainty for the first 5 signs was above 99% for the correct label.  However,, it is quite challenge to classify the sign of speed limit （20km/h). One possible reason is lack of training samples (less than 250). If applying more additional samples for speed limit (20km/h), the accuracy could be improved.
+As you can see, the model's certainty for the first 5 signs was above 99% for the correct label.  However,, it is quite challenge to classify the sign of speed limit （20km/h).
