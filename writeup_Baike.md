@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 [image5]: ./misc/Baseline_no_Dropout.JPG
 [image6]: ./misc/Base_Add_2Dropout.JPG
 [image7]: ./misc/Base_Data_Agument.JPG
-[image7]: ./misc/Base_Data_Augu_60.JPG
+[image8]: ./misc/Base_Data_Augu_60.JPG
 
 ---
 ### Files Submitted
@@ -141,9 +141,9 @@ My final accuracy was:
 ![alt text][image5]
 
 After implemmenting original LeNet model, the results are as follow:
-Training set accuracy of 94.8%
-Validation set accuracy of 90.1%
-Test set accuracy of 88.9%
+* Training set accuracy of 94.8%
+* Validation set accuracy of 90.1%
+* Test set accuracy of 88.9%
 
 2) It looks like it was overfitting as my training accuracy was remaining high. One of approach is to apply dropout. Thus, three 50% dropout  were introduced into the last 3 fully connected layers in my architecture. Please noteI that any dropout shall be avoided when validating the model on the validation and test sets. The training curves is ahown as below:
 
@@ -151,9 +151,9 @@ Test set accuracy of 88.9%
 
 My model results with dropout function were:
 
-Training set accuracy of 98.8%
-Validation set accuracy of 96.0%
-Test set accuracy of 93.1%
+* Training set accuracy of 98.8%
+* Validation set accuracy of 96.0%
+* Test set accuracy of 93.1%
 
 3) Atually, I have tried to augmented the training data set by rotating, translating and zooming images. The training is curve is shpwn as below:
 
@@ -161,32 +161,23 @@ Test set accuracy of 93.1%
 
 My model results with augumenting data set function were:
 
-Training set accuracy of 98.7%
-Validation set accuracy of 96.1%
-Test set accuracy of 93.2%
+* Training set accuracy of 98.7%
+* Validation set accuracy of 96.1%
+* Test set accuracy of 93.2%
 It is a liitle surpise that it does not improve the accuracy so much.
 
 4) I deceded to increase the epochs from 20 to 60. The training curve is shown as below:
 
 ![alt text][image8]
 
+My model results with more epochs were:
 
-I ran this model with some variations in the hyperparameters to get an idea of its effect on the validation accuracy. I also alternated between max pooling and average pooling, which didn't have a significant impact on the validation accuracy. The LeNet architecture was then modified to include dropout layers to prevent overfitting. The accuracy improved by approx. 2%. I then varied parameters such as the batch size, learning rate, epochs, and the probability of keeping values in the dropout layer (i.e. keep_prob) to see its effect on the validation accuracy. The following hyperparameters were chosen after multiple iterations:
+* Training set accuracy of 99.3%
+* Validation set accuracy of 96.1%
+* Test set accuracy of 94.3%
 
-Hyperparameters:
 
-Batch size: 100
-Learning rate: 0.0009
-Epochs: 75
-Keep_prob: 0.5
-I also augmented the training data set by flipping, rotating, translating and zooming images since it was skewed towards a few classes. At first, this seemed to reduce the validation accuracy. I then lowered the rotation angle and removed the flip operation in the augmented data set. Image operations with large, agressive changes were reducing the accuracy once the training set was augmented. Validation accuracy improved by approx. 1%.
 
-My final model results were:
-
-Training set accuracy of 99.8%
-Validation set accuracy of 96.8%
-Test set accuracy of 95%
-This model yielded a training, validation, and test accuracy greater than the project criteria of 93% and thus, was judged to perform well.
 
 I also modified the LeNet architecture by removing one of the fully connected layers and widening the second last fully connected layer so that the input from 800 nodes would be processed into the 43 classes at the output layer. I was curious about the performance of wider vs. deeper networks. This wider network yielded similar results to the modified LeNet architecture above. I also tried the tanh activation function since it keeps the negative values from the convolution layer and rescales the data between -1 to 1, centered at zero. In addition, I tried both max and average pooling. These didn't have a significant impact on the validation accuracy after varying the hyperparameters. Then I tried to remove the pooling layers and found that the accuracy reduces due to overfitting. These modifications were made to further my understanding of the effect of model architecture on the validation accuracy.
 
