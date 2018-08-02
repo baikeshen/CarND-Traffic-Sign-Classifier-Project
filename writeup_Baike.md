@@ -18,9 +18,10 @@ The goals / steps of this project are the following:
 [image2]: ./misc/lenet.png "Lenet Diagram"
 [image3]: ./misc/modifiedLeNet.jpeg "modified LetNet Model"
 [image4]: ./misc/Addition_7_Germany_Traffic_Signs.JPG "7 Germany Traffic Signs"
-[image5]: ./new_signs/sign3.jpg "Sign3"
-[image6]: ./new_signs/sign4.jpg "Sign4"
-[image7]: ./new_signs/sign5.jpg "Sign5"
+[image5]: ./misc/Baseline_no_Dropout.JPG
+[image6]: ./misc/Base_Add_2Dropout.JPG
+[image7]: ./misc/Base_Data_Agument.JPG
+[image7]: ./misc/Base_Data_Augu_60.JPG
 
 ---
 ### Files Submitted
@@ -135,7 +136,39 @@ My final accuracy was:
 
 #### Solution Approach
 
-I implemented the LeNet architecture since it worked well for the analysis of 32x32x1 MNIST images in the previous assignment. 
+1) I implemented the LeNet architecture since it worked well for the analysis of 32x32x1 MNIST images in the previous assignment. 
+
+![alt text][image5]
+
+After implemmenting original LeNet model, the results are as follow:
+Training set accuracy of 94.8%
+Validation set accuracy of 90.1%
+Test set accuracy of 88.9%
+
+2) It looks like it was overfitting as my training accuracy was remaining high. One of approach is to apply dropout. Thus, three 50% dropout  were introduced into the last 3 fully connected layers in my architecture. Please noteI that any dropout shall be avoided when validating the model on the validation and test sets. The training curves is ahown as below:
+
+![alt text][image6]
+
+My model results with dropout function were:
+
+Training set accuracy of 98.8%
+Validation set accuracy of 96.0%
+Test set accuracy of 93.1%
+
+3) Atually, I have tried to augmented the training data set by rotating, translating and zooming images. The training is curve is shpwn as below:
+
+![alt text][image7]
+
+My model results with augumenting data set function were:
+
+Training set accuracy of 98.7%
+Validation set accuracy of 96.1%
+Test set accuracy of 93.2%
+It is a liitle surpise that it does not improve the accuracy so much.
+
+4) I deceded to increase the epochs from 20 to 60. The training curve is shown as below:
+
+![alt text][image8]
 
 
 I ran this model with some variations in the hyperparameters to get an idea of its effect on the validation accuracy. I also alternated between max pooling and average pooling, which didn't have a significant impact on the validation accuracy. The LeNet architecture was then modified to include dropout layers to prevent overfitting. The accuracy improved by approx. 2%. I then varied parameters such as the batch size, learning rate, epochs, and the probability of keeping values in the dropout layer (i.e. keep_prob) to see its effect on the validation accuracy. The following hyperparameters were chosen after multiple iterations:
