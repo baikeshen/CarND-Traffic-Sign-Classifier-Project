@@ -145,7 +145,7 @@ After implementing original LeNet model, the results are as follow:
 * Validation set accuracy of 90.1%
 * Test set accuracy of 88.9%
 
-2) It looks like it was overfitting as my training accuracy was remaining high. One of approach is to apply dropout. Thus, three 50% dropout were introduced into the last 3 fully connected layers in my architecture. Please noteI that any dropout shall be avoided when validating the model on the validation and test sets. The training curves is ahown as below:
+2) It looks like it was overfitting as my training accuracy was remaining high. One of approach is to apply dropout. Thus, three 50% dropout were introduced into the last 3 fully connected layers in my architecture. Please note that any dropout shall be avoided when validating the model on the validation and test sets. The training curves is ahown as below:
 
 ![alt text][image6]
 
