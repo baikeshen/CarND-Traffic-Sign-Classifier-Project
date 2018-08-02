@@ -133,6 +133,29 @@ My final accuracy was:
 * 96.2% on the validation set
 * 93.5% on the test set 
 
+#### Solution Approach
+
+I implemented the LeNet architecture since it worked well for the analysis of 32x32x1 MNIST images in the previous assignment. 
+
+
+I ran this model with some variations in the hyperparameters to get an idea of its effect on the validation accuracy. I also alternated between max pooling and average pooling, which didn't have a significant impact on the validation accuracy. The LeNet architecture was then modified to include dropout layers to prevent overfitting. The accuracy improved by approx. 2%. I then varied parameters such as the batch size, learning rate, epochs, and the probability of keeping values in the dropout layer (i.e. keep_prob) to see its effect on the validation accuracy. The following hyperparameters were chosen after multiple iterations:
+
+Hyperparameters:
+
+Batch size: 100
+Learning rate: 0.0009
+Epochs: 75
+Keep_prob: 0.5
+I also augmented the training data set by flipping, rotating, translating and zooming images since it was skewed towards a few classes. At first, this seemed to reduce the validation accuracy. I then lowered the rotation angle and removed the flip operation in the augmented data set. Image operations with large, agressive changes were reducing the accuracy once the training set was augmented. Validation accuracy improved by approx. 1%.
+
+My final model results were:
+
+Training set accuracy of 99.8%
+Validation set accuracy of 96.8%
+Test set accuracy of 95%
+This model yielded a training, validation, and test accuracy greater than the project criteria of 93% and thus, was judged to perform well.
+
+I also modified the LeNet architecture by removing one of the fully connected layers and widening the second last fully connected layer so that the input from 800 nodes would be processed into the 43 classes at the output layer. I was curious about the performance of wider vs. deeper networks. This wider network yielded similar results to the modified LeNet architecture above. I also tried the tanh activation function since it keeps the negative values from the convolution layer and rescales the data between -1 to 1, centered at zero. In addition, I tried both max and average pooling. These didn't have a significant impact on the validation accuracy after varying the hyperparameters. Then I tried to remove the pooling layers and found that the accuracy reduces due to overfitting. These modifications were made to further my understanding of the effect of model architecture on the validation accuracy.
 
 ### Testing the Model on New Images
 
