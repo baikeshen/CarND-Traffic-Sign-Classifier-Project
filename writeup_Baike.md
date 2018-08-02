@@ -140,7 +140,7 @@ My final accuracy was:
 
 ![alt text][image5]
 
-After implemmenting original LeNet model, the results are as follow:
+After implementing original LeNet model, the results are as follow:
 * Training set accuracy of 94.8%
 * Validation set accuracy of 90.1%
 * Test set accuracy of 88.9%
@@ -194,7 +194,8 @@ Here are seven German traffic sign images that I found on the web with some crop
 
 : ![alt text][image4]
 
-Image 1,3, 5 and 6 include a lot of background noise.  It should be relative difficult to classify. Image 6 and Image 7 are cropped from the same image. Image 7 should be easier to identified given less backgroud.
+I don't think these images should be difficult to classify since they look similar to the images from the training set after being rescaled to the same size. Furthermore, all new images are much brighter and clear. For the mis-classified images, I was intended to make the 20km/h sign smaller and leave more space to the background. The prediction result does not surprise me. 
+
 
 #### Model's predictions
 
