@@ -145,7 +145,7 @@ After implemmenting original LeNet model, the results are as follow:
 * Validation set accuracy of 90.1%
 * Test set accuracy of 88.9%
 
-2) It looks like it was overfitting as my training accuracy was remaining high. One of approach is to apply dropout. Thus, three 50% dropout  were introduced into the last 3 fully connected layers in my architecture. Please noteI that any dropout shall be avoided when validating the model on the validation and test sets. The training curves is ahown as below:
+2) It looks like it was overfitting as my training accuracy was remaining high. One of approach is to apply dropout. Thus, three 50% dropout were introduced into the last 3 fully connected layers in my architecture. Please noteI that any dropout shall be avoided when validating the model on the validation and test sets. The training curves is ahown as below:
 
 ![alt text][image6]
 
@@ -166,7 +166,7 @@ My model results with augumenting data set function were:
 * Test set accuracy of 93.2%
 It is a liitle surpise that it does not improve the accuracy so much.
 
-4) I deceded to increase the epochs from 20 to 60. The training curve is shown as below:
+4) I decided to increase the epochs from 20 to 60. The training curve is shown as below:
 
 ![alt text][image8]
 
@@ -176,10 +176,15 @@ My model results with more epochs were:
 * Validation set accuracy of 96.1%
 * Test set accuracy of 94.3%
 
+Eventually, I decided
+* not to augument any data setour
+* use epoch = 30
+* Use three dropout with prob=0.5  
 
+My final accuracy was: 
+* 96.2% on the validation set
+* 93.5% on the test set 
 
-
-I also modified the LeNet architecture by removing one of the fully connected layers and widening the second last fully connected layer so that the input from 800 nodes would be processed into the 43 classes at the output layer. I was curious about the performance of wider vs. deeper networks. This wider network yielded similar results to the modified LeNet architecture above. I also tried the tanh activation function since it keeps the negative values from the convolution layer and rescales the data between -1 to 1, centered at zero. In addition, I tried both max and average pooling. These didn't have a significant impact on the validation accuracy after varying the hyperparameters. Then I tried to remove the pooling layers and found that the accuracy reduces due to overfitting. These modifications were made to further my understanding of the effect of model architecture on the validation accuracy.
 
 ### Testing the Model on New Images
 
